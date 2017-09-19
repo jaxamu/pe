@@ -1,0 +1,90 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,input,textarea,dl,dd{ margin:0; padding:0; }	/*去本身样式*/
+	body{background-color:#fff;font-family:Arial, "Microsoft YaHei","宋体";}
+	a{text-decoration:none;vertical-align:top;color: #666666;}/*参考对齐上*/
+	a:hover{color: #C81623;}	
+	i{font-style: normal;font-family: consolas;}/*特殊字体	取消斜体*//*a的下划线去掉*/
+	img,input{border:none; }/*图片的边框*/
+	.mr30{  margin-right: 30px; }
+	.mr15{ margin-right: 15px;  }
+	.pt10{ padding-top:10px ;  }
+	.pt7{ padding-top:7px ;  }
+	.top37{ top: 37px;  }
+	.Top_header{ background: #1f272d;height: 37px;border-bottom: #39434a;color: #717171;line-height: 38px;font-size: 12px; }
+	.nav_but{ border: none; background: transparent ; }
+	nav.navbar{background: #283036;  border-radius: 0; border: none;  }
+	.navbar-collapse.collapse{ padding-bottom: 15px;padding-top:15px ;  }
+	.navbar-default .nav_ul .nav_li a{   font-size: 14px; color: #fff;  }
+	.navbar-default .navbar-nav>li>a:hover { color: #C0A16B;background: #C0C0C0;  }
+	nav .nav_ul li .bian_zuo{ border-left:1px solid #898989 ;color: #898989;  padding-left: 10px;  }
+	.mian{  background: #fff;  }
+	.mian .banner{ margin-top: 117px; background: #f04949; }
+	.mian .banner .ban_img{position: relative;left: -50px; margin-top: 57px; }
+	.mian .banner .mian_h2 {margin-top: 170px; position: relative;right: -50px;font-size: 59px;line-height:70px; color: #fff;  }
+	.mian .banner .mian_h22 {  position: relative;right: -50px;  font-size: 59px;line-height: 70px; color: #fff;  }
+	.mian .banner .mian_p { position: relative;right: -50px; font-size: 18px;line-height: 24px; color: #fff; }
+	.mian section .texts { margin-top: 40px;  }
+	.mian section .texts h2{ color:#f04949;font-size:36px;line-height:106px;text-align:center;  }
+	.mian section .texts p{ color:#000;font-size:14px;line-height:24px;text-align:center;  }
+	.mian section .Recent_fd a{ float:left ;border-color: #f04949;border-radius:0 ;margin-left: -1px; }
+	.mian section .Recent_fd .active{ background: #f04949; }
+	.mian section .Recent {margin-top: 85px;padding-bottom: 100px; background: #fff; }
+	.mian section .Recent .Recent_title{color:#000;font-size:24px;line-height:42px;  }
+	.mian section .Recent .Recent_x4 .well.red .media-heading { color:#fff;font-size:14px;line-height:40px; }
+	.mian section .Recent .Recent_x4 .well .media-heading{color: #000;font-size:14px;line-height:40px;}
+	.mian section .Recent .Recent_x4 .well {color: #000;}
+	.mian section .Recent .Recent_x4 .well.red { background-color: #f04949;color: #fff;}
+	.Purchase_now .Purchase   {padding: 45px 0 85px; }
+	.Purchase_now .Purchase h3  {color:#fff;font-size:48px;line-height:100px;text-align:center; }
+	.Purchase_now .Purchase p  {color:#fff;font-size:16px;line-height:23px;text-align:center; }
+	.Purchase_now .Purchase  button { margin-top: 34px;background: transparent;border-color: #fff;color: #fff;}
+	.Purchase_now   {background: transparent; padding: 0;}
+	.con   { background: #fff;}
+	.con .Icon  { padding: 109px 0 78px; }
+	.con .Icon  .media-middle{ vertical-align: text-top; }
+	.con .Icon  .media-heading{color: #f04949;  }
+	.con .About   { padding-bottom: 75px; }
+	.con .About  h2 { margin-bottom: 40px;color:#000;font-size:24px;line-height:25px; }
+	.con  .About .Latest .media-body  {color:#000;font-size:13px;line-height:25px;  }
+	.con  .About .Latest .hongs  {width: 100%;height: 7px;background: #f04949;  }
+	.con  .About .Latest  .img-responsive {position: relative;  }
+	.con  .About .Latest .date {position: absolute; left: 15px; width:50px ;height: 45px;background: #F04949;}
+	.con  .About .Latest .date h4{color:#fff;font-size:20px;line-height:25px;text-align:center; }
+	.con  .About .Latest .date p{color:#fff;font-size:13px;line-height:20px;text-align:center; }
+	.con  .About .Latest .media-body .media-heading{ margin-bottom: 12px;font-size:17px; }
+	.mbot {margin-bottom: 44px; }
+	.con  .zhedie .panel-group .panel.panel-default { margin-bottom: 15px; border: none; border-radius: 0 !important;background: #fff; }
+	.con  .zhedie .panel-default>.panel-heading { background: #d3d3d3;color: #000; }
+	.con  .zhedie .panel-default>.panel-heading.red { background: #F04949;color: #fff; }
+	footer   { background: #F04949;padding: 15px 0 30px; }
+	footer  .foot_img { width: 212px;height: 212px;overflow: hidden; }
+	footer h2  { color:#fff;font-size:23px;line-height:80px;text-align:center; }
+	footer  p { color:#fff;font-size:13px;line-height:18px;text-align:center;margin-bottom: 50px; }
+	footer  h3 {color:#fff;font-size:20px;line-height:83px;text-align:center;  }
+	.foot { background: #283036;padding: 75px 0 80px; }
+	.foot img { margin-bottom: 65px; }
+	.foot p{ color:#fff;font-size:13px;line-height:30px;text-align:center; }
+	.foot  .ding {font-size:23px;line-height:40px;text-align:center;width: 40px;height: 40px; background: #F04949;color: #fff; position: absolute;bottom: 207px;right:10% ; }
+	.foot  { position: relative; }
+	
+	
+	
+	body .bjj{-webkit-filter: brightness(80%);  filter: brightness(45%); position: fixed;z-index: -1;width: 100%;height: 100%; background: url(../images/tc110.png) no-repeat  ; background-size: cover;    }
+	body { background:transparent ;   }
+
+@media screen and (max-width:768px ){
+	.container{ width: 85%;}
+	.mian .banner{ margin-top: 88px; background: #f04949; }
+	.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3,
+	 .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{     padding-right: 10px;
+    padding-left: 10px; }
+}	
+@media screen and (min-width:768px ){
+	
+}	
+@media screen and (min-width:992px ){
+	.mian .banner{ margin-top: 117px; background: #f04949; }	
+}
+@media screen and (min-width:1200px ){
+	
+}
+	

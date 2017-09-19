@@ -1,0 +1,76 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,input,textarea,dl,dd{ margin:0; padding:0; }	/*去本身样式*/
+body{background-color:#fff;font-family:Arial, "Microsoft YaHei","宋体";font-size: .16rem;}
+ul{ list-style:none; }	/*overflow: hidden;溢出隐藏*/	/*去本身样式       */  /*图片的边框*/
+a{text-decoration:none;vertical-align:top;color: #666666;}/*参考对齐上*/
+a:hover{color: #C81623;}	
+i{font-style: normal;font-family: consolas;}/*特殊字体	取消斜体*//*a的下划线去掉*/
+img,input{border:none;display: block; }/*图片的边框*/
+.clearfix:after{
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;	
+}	
+.clearfix{
+	*zoom: 1;
+}
+body{ background: #fff;}
+.ding{ position: fixed; top: 0;width: 3.75rem;}
+.hallo{width: 3.75rem; margin: 2.5rem 0;  color:#000;font-size:.3rem;line-height:.48rem; text-align:center; }
+.wangyi{ width: 3.75rem; margin-top: .2rem; }
+header{ width: 3.75rem;  }
+header img{width: 100%;margin-bottom: -.04rem;   }
+header nav {width: 3.75rem;   }
+header nav ul {   }
+header nav ul li {float: left;width: 25%;height: .48rem; background: #ccc; text-align:center;  }
+header nav ul li:hover {color: #C0A16B;   }
+header nav ul li a {color:#666666;font-size:.14rem;line-height:.48rem;height:.48rem;text-align:center;   }
+
+.content{ width: 3.75rem; }
+img {width: 100%;  }
+.content .banner  {width: 3.75rem;  }
+.content .banner img {width: 100%;  }
+.content .gedan  {position: relative;width: 3.75rem;}
+.content .gedan .gedan_item {width: 33.333%;float: left;  }
+.content .gedan .gedan_item img {width: 100%;  }
+.content .gedan .gedan_item p { height: .45rem; overflow:hidden; width: 100%;background: #fff;  }
+.content .gedan .gedan_item span {color: #fff; position: absolute;height:.25rem;  }
+.liebiao {  }
+.liebiao  li{ height: .54rem;border-bottom: .01rem #ededed solid; position: relative;}
+.liebiao  li:hover{  }
+.liebiao  li a{  }
+.liebiao  li a .music_name{color:#000;font-size:.2rem;line-height:.34rem;  }
+.liebiao  li a p{color:#888888;font-size:.14rem;line-height:.14rem;  }
+.liebiao  li a .tubiao{ position: absolute;right: .2rem;top: .2rem; }
+.fanhui {width:3.75rem; position: fixed;top: 0;  font-size: .15rem;line-height: .5rem;  height: .5rem;background: #F04949; }
+.fanhui span{margin-left: .2rem; }
+
+.footer {width:3.75rem; height: .5rem; position: fixed;z-index: 100; left: 0;bottom: 0;background: #fff; }
+.footer #audio{width: 3.75rem;  }
+.footer .foot_music{margin-left: .5rem; color:#000;font-size:.14rem;line-height:.28rem;height:.28rem;  }
+.footer .foot_name{margin-left: .5rem;color:#ccc;font-size:.1rem;line-height:.1rem;height:.1rem;  }
+.footer .foot_btn{width: .28rem;height: .28rem;background-image:url(../images/playbar_btn_pause.png) ;background-size: contain; position: absolute; right: .1rem; top: .05rem; }
+.footer .foot_btn.ting{width: .28rem;height: .28rem;background-image:url(../images/playbar_btn_play.png) ;background-size: contain; position: absolute; right: .1rem; top: .05rem; }
+
+.bofang{ width: 3.75rem;   background: url(../images/bj_02.png) repeat-x ;background-size: contain;   }
+.bofang .bf_title {height: .5rem;width: 100%; }
+.bofang .bf_title .bf_fanhui {margin-left: .2rem;float: left;width: .4rem;  }
+.bofang .bf_title .item_txt { float: left; }
+.bofang .bf_title .item_txt .geming  {margin-left: .2rem;color:#fff;font-size:.17rem;line-height:.35rem;height:.35rem;  }
+.bofang .bf_title .item_txt .zuozhe  {margin-left: .2rem;color:#ccc;font-size:.13rem;line-height:.14rem;height:.14rem;  }
+.bofang .bf_title .bf_fenxiang {float: right;margin-right: .2rem;margin-top: .1rem; width: .4rem; }
+.bofang .bf_con {  width: 3rem;margin: 0 .2rem ; }
+.bofang .bf_con .item_gan {transform: rotate(-30deg); transform-origin:left top ;transition:all .5s  ;z-index: 100; position: absolute;top: .6rem;left: 1.5rem; width:.8rem; height: 1.25rem;}
+.bofang .bf_con .item_img { position: relative; margin: .7rem .3rem 0; width: 2.55rem;height: 2.55rem; }
+.bofang .bf_con .item_img .pic_y {  }
+.bofang .bf_con .item_img .pic_img { position: absolute;top: .4rem;left: .4rem; }
+.bofang .bf_con .item_img .pic_img img{transform: rotate(0deg);border-radius: 50%;width: 1.8rem;height: 1.8rem; }
+.bofang .bf_con .bf_shouchang { width: 100%;margin-top: .3rem;margin-bottom: .2rem;height: .3rem; }
+.bofang .bf_con .bf_shouchang img{transform-origin:center ;transition:all 2s  ; float: left;width: 1.86rem; }
+.bofang .bf_con .bf_shouchang .shouc{margin: 0 .3rem;width: .26rem;  }
+.bofang #lrc {margin-top: .3rem;text-align: center; height: .5rem;width: 100%;color:#fff;font-size:.13rem;line-height:.5rem; }
+.bofang .bf_bf {width: 100%; height: .7rem;  }
+.bofang .bf_bf img { margin: 0 auto;width: .5rem;}
+
+
