@@ -1,0 +1,15 @@
+<import src="template/tem.wxml" />
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <view wx:for="{{imgUrls}}" wx:key>
+    <swiper-item>
+      <image src="{{item}}" class="slide-image le_img" />
+    </swiper-item>
+  </view>
+</swiper>
+<view class="lest_con">
+  <block wx:for="{{con}}" wx:key>
+    <template is="msgItem" data="{{item}}" />
+  </block>
+
+</view>

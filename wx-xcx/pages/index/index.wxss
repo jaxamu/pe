@@ -1,0 +1,6 @@
+/* pages/index/index.wxss */
+.wo{ font-size: 50rpx }
+page{background: #ccc;}
+.contaion{display: flex;flex-wrap:wrap;justify-content:center;align-items:center;flex-direction:column; }
+.dianji{background: #fff;margin: 100rpx 0}
+.img{width: 414rpx;height: 400rpx;margin: 50rpx 0;}

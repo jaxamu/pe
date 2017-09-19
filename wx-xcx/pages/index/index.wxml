@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+<view class="contaion">
+  
+    <image class="img" src="../../img/mw.jpg" ></image>
+    <text class="txt">美文欣赏</text>
+    <view class="dianji" catchtap="oncon"  >点我进入</view>
+  
+</view>
+
+

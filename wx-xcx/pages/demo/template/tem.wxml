@@ -1,0 +1,40 @@
+<template name="msgItem">
+<view>
+  <view  class="le_item" catchtap="tiao" data-id="{{item.id}}"   >
+    <view class="le_box">
+      <image class="pic_img" src="{{item.src}}"></image>    
+        <view class="txt">
+          <text class="title">{{ item.title }}</text>
+        <text> {{ item.txt  }} </text>      
+      </view>
+    </view>
+  </view>  
+</view>
+</template>
+
+
+
+<template name="msgItem2">
+<view>
+  <view  class="le_item" >
+    <image class="pic_img" src="{{item.src}}"></image>
+      <view class="txt">
+        <text class="title">{{ item.title }}</text>
+      <text> {{ item.txt  }} </text>
+    </view>
+  </view>
+</view>
+</template>
+
+
+<template name="msgItem3">
+<view>
+  <view  class="le_item" >
+    <image class="pic_img" src="{{item.src}}"></image>
+      <view class="txt">
+        <text class="title">{{ item.title }}</text>
+      <text> {{ item.txt  }} </text>
+    </view>
+  </view>
+</view>
+</template>

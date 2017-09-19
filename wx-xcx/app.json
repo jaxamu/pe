@@ -1,0 +1,38 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/demo/demo" ,
+    "pages/demo/xiangq1/xiangq1"
+  ],
+  "window": {
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#fff",   
+    "navigationBarTitleText": "我的小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar1": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"img/qq.jpg",
+        "selectedIconPath":"img/qq.jpg"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "日志",
+        "iconPath": "img/qq.jpg",
+        "selectedIconPath": "img/qq.jpg"
+      }
+    ],
+    "color": "red",
+    "selectedColor":"#ccc",
+    "backgroundColor":"#fff",
+    "borderStyle":"#black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

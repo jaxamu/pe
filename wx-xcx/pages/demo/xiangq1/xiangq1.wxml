@@ -1,0 +1,17 @@
+<!--pages/demo/xiangq1/xiangq1.wxml-->
+
+
+
+   <image class="xqimg" src="{{list.src}}"></image>
+  
+<view class="title">
+  {{list.title}}
+  <view class="shouc_img" catchtap="shouc" >
+    <image wx:if="{{bool}}" class="shouc " src="/img_sc/images/a.jpg "></image>
+    <image wx:else class="shouc1 " src="/img_sc/images/b.jpg "></image>
+  </view>
+</view>
+
+
+
+<view class="classname ">{{list.txt}}</view>

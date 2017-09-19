@@ -1,0 +1,11 @@
+.le_img{
+  width: 100%;
+  height: 360rpx;
+}
+.lest_con{display: flex;flex-direction:column;}
+.le_item {border-bottom: 1rpx #ccc solid;}
+.le_item .le_box{ padding:20rpx ;  display: flex; height: 162rpx;overflow: hidden;}
+.pic_img{width: 162rpx;height: 162rpx;flex-grow:0;}
+.txt{flex-grow:1;width: 530rpx;display: flex;flex-direction:column;margin-left: 20rpx;}
+.txt .title{font-size: 35rpx;font-weight:bold;line-height: 50rpx;}
+.txt text{font-size: 30rpx;line-height: 35rpx;  }

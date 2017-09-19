@@ -1,0 +1,5 @@
+/* pages/demo/xiangq1/xiangq1.wxss */
+.xqimg{width: 100%}
+.shouc{width: 100rpx;height: 100rpx;}
+.shouc1{width: 100rpx;height: 100rpx;}
+
