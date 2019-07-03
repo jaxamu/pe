@@ -1,0 +1,185 @@
+<!-- 
+	昨天没有对代码进行封装
+
+	今天：
+
+		展示所有小图；
+		展示一张大图；
+		大图和小图之间可以进行切换；
+
+		布局初始化；
+
+
+		1）布局初始化（init）
+
+		创建 25 div(1)；追加；调整布局（left，top）；
+
+		js：
+		init();
+
+		function init (){
+			创建 25 div；追加；调整布局（left，top）；
+
+		}
+
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ 	<script src='jquery-3.1.0.min.js'></script>
+ 	<style>
+ 		body {background: #000;}
+		.gallary {width: 980px; height: 500px;}
+		.center {position: absolute; margin: auto; left: 0; top: 0; bottom: 0; right: 0;}
+		.item {width: 196px; height: 100px; position: absolute; background: #fff; transition: transform .8s;}
+		.pic {width: 100%; height: 100%; transition: transform .8s;}
+ 	</style>
+ </head>
+ <body>
+ 	<div class="gallary center"></div>
+ </body>
+ </html>
+ <script>
+ 	$(function () {
+ 		// body...
+ 		// 
+ 		// init 布局
+ 		// 
+ 		
+ 		init();
+
+ 		initClick();
+
+ 		showAll();
+
+ 		// 触发定时器 （rotate，1000）
+ 		// 封装转动动画的方法
+ 		function rotate() {
+ 			// body...
+ 			// item 添加动画（rotate）
+ 		}
+
+
+ 		
+ 		// showPic(13);
+
+ 		// 布局初始
+ 		function init() {
+ 			// body...
+ 			var gallary = $('.gallary');
+ 			// 创建25个div
+ 			for (var i = 0; i < 25; i++){
+ 				var x = parseInt(i % 5);
+ 				var y = parseInt(i / 5)
+
+ 				$('<div class="item"><div class="pic"></div></div>')
+ 					.css('left', x*196 + 'px')
+ 					.css('top', y*100 + 'px')
+ 					.appendTo(gallary);
+ 			}
+ 		}
+
+ 		// 显示全部图片
+ 		function showAll() {
+ 			// body...
+ 			// 获取页面上的所有div；
+ 			// 添加背景图（调整位置，size）
+ 			// var items = $('.item');
+ 			var pics = $('.item .pic');
+
+ 			pics.each(function (i) {
+ 				// body...
+ 				
+ 				$(this)
+ 					.css('background-image', 'url(imgs/' + i + '.jpg)')
+ 					.css('background-size', 'cover')
+ 					.css('transform', 'scale(.95)')
+ 					;
+
+ 				// body 黑色
+ 				// item -> pic
+ 				// item 大小不变，背景色为白色
+ 				// pic 缩小后，会出现白框
+ 			});
+
+ 			// 分散
+ 			$('.item').each(function (i) {
+ 				var x = parseInt(i % 5);
+ 				var y = parseInt(i / 5);
+
+ 				var offsetX = 50*x - 100;
+ 				var offsetY = 50*y - 100;
+
+ 				// 旋转角度 -30 ~ 30
+ 				// min,max     math*max-min +min
+ 				var rotate = Math.random()*60 - 30;
+
+ 				$(this).css('transform', 'translate('+offsetX+'px,'+offsetY+'px) rotate('+rotate+'deg)');
+ 				// transform: translate(x, y) rotate()
+ 				// body...
+ 			});
+ 		}
+
+ 		// 显示一张图片
+ 		function showPic(index) {
+ 			// body...
+ 			// 获取所有的div
+ 			// 设置背景（index.jpg, 位置，size）
+ 			
+ 			var pics = $('.item .pic');
+
+ 			pics.each(function (i) {
+ 				var x = parseInt(i % 5);
+ 				var y = parseInt(i / 5);
+ 				// body...
+ 				$(this)
+ 					.css('background-image','url(imgs/' + index +'.jpg)')
+ 					.css('background-size', 'auto')
+ 					.css('background-position', x*-196+'px ' + y*-100+'px');
+ 			});
+
+
+ 			// 聚合
+ 			// transform变型
+ 			// pic收缩
+ 			$('.pic').css('transform','scale(1)');
+ 			// item
+ 			$('.item').css('transform', 'translate(0, 0) rotate(0deg)');
+ 			
+ 			
+ 		}
+
+
+ 		// 大、小图切换
+ 		function initClick() {
+ 			// body...
+ 			// 为所有的div 绑定点击事件；
+ 			// 如果当前显示的小图，那么点击后显示大图；
+ 			// 如果当前显示的是大图，那么点击后显示小图；
+ 			// if else
+			
+			var items = $('.item');
+			var isShowAll = true;	
+			//记录当前显示的是大图还是小图 true：小图
+
+			items.click(function () {
+				// body...
+				if (isShowAll) {
+					var i = items.index($(this));
+					showPic(i);
+				}else{
+					showAll();
+				}
+
+				isShowAll = !isShowAll;
+			}); 			
+
+ 		}
+ 	});
+ </script>
+
+ 

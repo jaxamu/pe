@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{padding-bottom:200px ;}
+			canvas{margin: 100px; border: 1px royalblue solid; box-shadow: 0 0 10px #000000; }
+			
+			
+		</style>
+	</head>
+	<body>
+		<canvas id="cvs" width="1000px" height="600px"></canvas>
+	</body>
+</html>
+<script type="text/javascript">
+	var cancvs=document.getElementById('cvs')
+	var cvs=cancvs.getContext('2d')	
+	
+	var arr=["green","blue","red","yellow",'purple' ]
+	
+	/*cvs.beginPath();	//开启新的
+	cvs.arc(700,375,150,0,2*Math.PI)
+	cvs.fillStyle=arr[i];
+	cvs.fill()*/
+	
+	function Yuan(x,y,r,max,c,sp){
+		this.x=x;	//x轴
+		this.y=y;	//y轴
+		this.r=r;	//半径
+		this.c=c;	//颜色
+		this.max=max;	//最大的半径
+		this.speed=sp;	//每次的增加的大小
+		this.state=true;
+		
+		//创建圆
+		this.chuangj = function(){
+			cvs.beginPath();	//开启新的
+			cvs.arc(x,y,this.r,0,Math.PI*2)
+			cvs.fillStyle=this.c;
+			cvs.fill()
+			
+			
+			
+			
+			
+			if (this.state){	//如果真的时候
+				// 变大
+				this.r += this.speed;	//他的半径30秒加上速度
+				if (this.r > this.max){	//当加到最大的值的时候
+					this.state = !this.state;//不加了，等于假
+				}
+			}else{						//否者
+				// 变小
+				this.r -= this.speed;	//半径慢慢小
+				if (this.r < 0){		//如果到了0
+					this.r = 5;			//半径等于0
+					this.state = !this.state;	//取反
+				}
+			};	//循环
+			
+		};
+	};
+	
+	function yans(){	//颜色
+		var r=parseInt(Math.random()*255);
+		var g=parseInt(Math.random()*255);
+		var b=parseInt(Math.random()*255);
+		var rgb='rgb('+r+','+g+','+b+')';
+		return rgb;
+	};
+	var arr=[];		//存所有的圆  100个
+	function inn(){
+		for(var i=0;i<100;i++){		//创建100个圆
+			var x=Math.random()*cancvs.width;	//x轴最多在右边上
+			var y=Math.random()*cancvs.height;	//y		下
+			var r=Math.random()*50+10;		//圆的半径在60-0
+			var c=yans()					//颜色随机
+			var max = 70;				//最大半径
+			var s=parseInt(Math.random()*5+1);	//变化的速度
+			var run=new Yuan(x,y,r,max,c,s)	//创建100个新的函数创建圆  可以改变构造函数
+			arr.push(run) ;				//最后把所有创建的圆插入arr
+			//arr[i].chuangj();
+		};
+	};
+	inn();
+	
+	setInterval(shuij,30)	//30毫秒变化一次，变大或小
+	
+	function shuij(){		//变化
+		cvs.clearRect(0,0,cancvs.width,cancvs.height);	//30毫秒清除一次画布
+		for(var i=0;i<100;i++){
+			arr[i].chuangj();		//启动100个圆的创建
+		}
+		
+	}
+	
+	
+</script>

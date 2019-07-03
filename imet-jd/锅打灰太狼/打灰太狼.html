@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.boxx{position: relative; left: 100px; }
+			.box img{cursor:	pointer; }
+			.xuetiao{position: absolute; top: 66px; left: 63px; width: 180px;height: 16px; }
+			.kais{position: absolute;top: 247px;left: 110px;color:#C5000E ;font-size:25px;line-height:48px;display: block;cursor:	pointer;}
+			.kais1{position: absolute;top: 247px;left: 110px;color:#C5000E ;font-size:25px;line-height:48px;display: none;cursor:	pointer;}
+			.defen{ position: absolute;top: 0;left: 64px;color:#fff ;font-size:25px;line-height:48px; }
+			.box{  position: absolute;  };
+
+		</style>
+	</head>
+	<body>
+		<div class="boxx"  >
+			<div class="kais">
+				游戏开始
+			</div>
+			<div class="kais1">
+				游戏结束
+			</div>
+			<div class="defen">
+				0
+			</div>
+			<img class="xuetiao" src="img/progress.png"/>
+			<img src="img/game_bg.jpg"/>
+			<div class="box">
+				<!--<img src="img/h0.png"/>-->
+			</div>
+		</div>
+	</body>
+</html>
+<script src="jquery-1.11.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+var i=0;	var inem1,inem,inem2,inem3,shuiji0,shuiji1,arrPos;
+var hui='h';
+var index;
+var zhen=true;
+var box=$('.box');
+var img=$('<img />');
+var xuetiao=180;
+var defen=0;
+var kuai=80;
+
+
+$('.box').append(img);
+
+arrPos = [
+["98px","115px"],
+["17px","160px"],
+["15px","221px"],
+["30px","294px"],
+["122px","274px"],
+["207px","296px"],
+["200px","212px"],
+["187px","142px"],
+["100px","192px"]
+];
+
+
+img.click(function(){	//点击图片
+	clearInterval(inem);
+	clearInterval(inem1);
+	qiao();
+});
+
+function shuiji(){		//随机
+	shuiji1=parseInt( Math.random()*10 );
+	if( shuiji1>=0 && shuiji1<=6  ){
+		hui='h';
+	}else if( shuiji1>=8 && shuiji1<=10 ){
+		hui='x';
+	}
+	shuiji0=parseInt( Math.random()*9 );
+	box.css({ "left":arrPos[shuiji0][0], "top":arrPos[shuiji0][1]  });
+};
+	
+$('.kais').click(function(){
+	$('.kais').hide();
+	inem2=setInterval(function(){	//时间慢慢减少
+		xuetiao=xuetiao-0.4;
+		$(".xuetiao").css({ "width":xuetiao+"px"});
+		if(xuetiao<=0){
+			$('.kais1').show();
+			clearInterval(inme3);
+		}
+	},100 );
+	kais();
+})
+	
+function kais(){	//游戏开始
+	inme3=setInterval(function(){	
+		shuiji();
+		chu();
+	},1700)
+}
+	
+	//chu();
+function chu(){		//出来和进去的时候
+	inem=setInterval(function(){	//狼出来
+		$(img).show();
+		$('.box img').prop( "src" ,"img/"+hui+i+".png" )
+		i++;
+		if(i>5){
+			clearInterval(inem);
+			return;
+		};
+		index=i;
+		//console.log(index)
+	},kuai);
+	setTimeout(function(){	//下去
+		inem1=setInterval(function(){
+			i--;
+			$('.box img').prop( "src" ,"img/"+hui+i+".png" )
+			if(i==0){
+				$(img).hide()
+				clearInterval(inem1)
+				return;
+			};
+			index=i;
+			//console.log(index)
+		},kuai)
+		//console.log(inem1)
+	},kuai*5);
+};
+//qiao()
+function qiao(){	//敲
+	if(hui==="x"){
+		if(defen<=0){
+			defen=0;
+		}else{
+			defen=defen-10;
+			$(".defen").html(defen);
+		}
+	}else{
+		defen=defen+10;
+		$(".defen").html(defen);
+	}
+	var inem=setInterval(function(){	//狼被敲出来
+		console.log(i)
+		$('.box img').prop( "src" ,"img/"+hui+index+".png" )
+			index++;
+			if(index>5){
+				$('.box img').prop( "src" ,"" )
+				clearInterval(inem)
+				return;
+			};
+			//console.log(index)
+		},50);
+	var a=(5-index)*50;
+	var lan=6;
+	setTimeout(function(){		//挨打
+		var inem1=setInterval(function(){
+			lan++;
+			$('.box img').prop( "src" ,"img/"+hui+lan+".png" )
+			if(lan>=9){
+				$('.box img').prop( "src" ,"" )
+				$(img).hide();
+				clearInterval(inem1)
+			};
+			//console.log(index)
+		},kuai)
+	},a);
+};
+
+});//结束
+</script>

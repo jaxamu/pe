@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.11.1.js" type="text/javascript">		</script>
+		<style type="text/css">
+			.center{margin: auto;top: 0;left: 0;bottom: 0;right: 0; }
+			.box{ width: 980px;height: 500px;position: absolute; transform-style: preserve-3d;  transform:translateY(0px) rotateX(-30deg) rotateY(30deg) rotateZ(0deg);	transition: 2s ease-out ;  }
+			
+			
+			.pic{ height:100%; position:absolute; top:0; }
+		</style>
+	</head>
+	<body>
+		
+		<span>点击图片翻转</span><div class="box center">
+			<!--<div class="box1"></div>-->
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+$(function(){
+for(var i=0;i<4;i++){
+	$('<div class="box1"></div>')
+	//.css({"transform": "rotatex("+90*i+"deg) translateZ(250px) "})
+	
+	.appendTo('.box');
+};
+ $(".box1").each(function(j, element) {
+ 	//$(".box1").css({"transform": "rotatex("+90*i+"deg) translateZ(250px) "})
+		 
+		 var deg=j*90;
+		 
+		 for(var i=0;i<10;i++){
+			 
+			 var t=i*0.1;
+			 
+		     $("<div class='pic'>1</div>")
+			 .width(98)
+			 .css({
+				   "left":i*98+"px",
+				   "background-image":"url(img/"+j+".jpg)",
+				   "background-position":i*(-98)+"px 0px",
+				   "transform":"rotateX("+deg+"deg) translateZ(250px)",
+				   "transition":"transform .5s "+t+"s" 
+			  })
+		     .appendTo(this)	 
+		 };
+
+     });
+	 
+
+
+var box1=$('.box1')
+var box=$('.box')
+var boxx=0
+	$(window).click(function(){
+		boxx++
+		box1.each(function(i){
+			var r=i*90-boxx*90;
+			$(this).find(".pic").css({"transform":"rotateX("+r+"deg) translateZ(250px)"})
+				
+//			$(".pic").each(function(x){
+//				$(this).css({"transform":"rotateX("+r+"deg) translateZ(250px)"})
+//				
+//			})
+		})
+	})
+
+
+		
+})
+</script>
