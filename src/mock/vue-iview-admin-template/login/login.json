@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "code": 20000,
+  "data": function({
+    _req,
+    Mock
+  }) {
+    const T_USER = {
+      super_admin: {
+        name: 'super_admin',
+        user_id: '1',
+        auths: ['super_admin', 'admin'],
+        token: 'super_admin',
+        avatar: Mock.mock("@Image('200x200', 'super_admin')")
+      },
+      admin: {
+        name: 'admin',
+        user_id: '2',
+        auths: ['admin'],
+        token: 'admin',
+        avatar: Mock.mock("@Image('200x200', 'admin')")
+      }
+    }
+    let req = _req.body
+    let username = req.username
+    if (T_USER[username]) {
+      return {
+        "token": T_USER[username].token
+      }
+    } else {
+      return null
+    }
+  },
+  "message": '请求成功'
+}

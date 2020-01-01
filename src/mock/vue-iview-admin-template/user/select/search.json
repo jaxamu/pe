@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "code": 20000,
+  "data": {
+    "userList|10": [{
+      id: "@id",
+      username: '@first',
+      name: '@name',
+      department: '@region',
+      starttime: "@datetime",
+      state: '@integer(0, 1)',
+      sex: "@integer(1, 2)",
+      age: "@integer(16, 80)",
+      email: "@email",
+      areaname: '@province@city',
+      areacode: ['hangzhou'],
+      areaname: '杭州'
+    }],
+    count: 40
+  },
+  "message": "请求成功"
+}

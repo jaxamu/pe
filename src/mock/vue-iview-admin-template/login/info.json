@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "code": function({
+    _req,
+    Mock
+  }) {
+    const T_USER = {
+      super_admin: {
+        name: 'super_admin',
+        user_id: '1',
+        auths: ['super_admin', 'admin'
+        ],
+        token: 'super_admin',
+        avatar: Mock.mock("@Image('200x200', 'super_admin')")
+      },
+      admin: {
+        name: 'admin',
+        user_id: '2',
+        auths: ['admin'
+        ],
+        token: 'admin',
+        avatar: Mock.mock("@Image('200x200', 'admin')")
+      }
+    }
+    const query = _req.query
+    if (T_USER[query.token
+    ]) {
+      return 20000
+    } else {
+      return 50014
+    }
+  },
+  "data": function({
+    _req,
+    Mock
+  }) {
+    const T_USER = {
+      super_admin: {
+        name: 'super_admin',
+        user_id: '1',
+        auths: ['super_admin', 'admin'
+        ],
+        token: 'super_admin',
+        avatar: Mock.mock("@Image('200x200', 'super_admin')")
+      },
+      admin: {
+        name: 'admin',
+        user_id: '2',
+        auths: ['admin'
+        ],
+        token: 'admin',
+        avatar: Mock.mock("@Image('200x200', 'admin')")
+      }
+    }
+    const query = _req.query
+    if (T_USER[query.token
+    ]) {
+      return T_USER[query.token
+      ]
+    } else {
+      return null
+    }
+  },
+  "message": '请求成功'
+}

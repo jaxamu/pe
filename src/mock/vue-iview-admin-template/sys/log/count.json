@@ -1,0 +1,11 @@
+{
+  success: true,
+  code: 20000,
+  data: {
+    online: '@integer(160, 1000)',
+    newVisits: '@integer(160, 1000)',
+    totalUser: '@integer(500, 1000)',
+    messages: '@integer(10, 100)'
+  },
+  message: '请求成功'
+}
