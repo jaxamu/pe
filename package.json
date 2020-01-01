@@ -1,6 +1,6 @@
 {
   "name": "fy-agency-web",
-  "author":"web-amu",
+  "author": "web-amu",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,7 +19,7 @@
     "jquery": "^3.4.1",
     "jsencrypt": "^3.0.0-rc.1",
     "lodash": "^4.17.15",
-    "view-design": "^4.0.0",
+    "view-design": "^4.0.2",
     "vue": "^2.6.10",
     "vue-echarts": "^4.1.0",
     "vue-router": "^3.1.3",
